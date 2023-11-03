@@ -20,5 +20,6 @@ module Micolet
     # config.eager_load_paths << Rails.root.join("extras")
     config.i18n.default_locale = :en
     config.i18n.fallbacks = [:en]
+    config.autoload_paths << Rails.root.join("lib")
   end
 end
