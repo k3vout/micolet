@@ -47,6 +47,10 @@ gem "bootsnap", require: false
 
 gem "rails-i18n"
 
+gem "httparty"
+
+gem "dotenv-rails"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
