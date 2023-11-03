@@ -30,4 +30,28 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        email: Email
+      user_preference:
+        women_fashion: Women's Fashion
+        men_fashion: Men's Fashion
+        children_fashion: Children's Fashion
+  errors:
+    messages:
+      at_least_one_preference: "must be at least one"
+  brand_motto: Almost new fashion with guarantee
+  welcome_message: Welcome! Soon we will launch our site in this country.
+  subscribe_message: Subscribe to receive our newsletter.
+  preferences: Preferences
+  subscribe_me: Subscribe me!
+  subscribe_success: You have been subscribed successfully!
+  subscription_mailer:
+    subject: "Subscription confirmation"
+    body_html: |
+      <p>Hi %{email},</p>
+      <p>Thank you for subscribing to our newsletter.
+      We will keep you informed about our launch.</p>
+      <p>Best regards,</p>
+      <p>The Micolet team</p>

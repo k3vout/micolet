@@ -1,0 +1,27 @@
+<%= form_with model: user, url: subscribe_path, class: "w-full px-8" do |form| %>
+  <%= render partial: "shared/form_errors", locals: { object: form.object } %>
+  <div class="flex flex-col mb-3">
+    <%= form.label :email, class: "text-secondary text-sm mb-1" %>
+    <%= form.email_field :email, required: true, class: "border-2 rounded-md focus:border-primary focus:outline-none py-1 px-2" %>
+  </div>
+  <div class="mb-4">
+    <p class="text-secondary text-sm"><%= t("preferences") %></p>
+    <%= form.fields_for :user_preference do |ff| %>
+      <div class="mb-1">
+        <%= ff.check_box :women_fashion, class: "accent-primary cursor-pointer" %>
+        <%= ff.label :women_fashion, class: "cursor-pointer" %>
+      </div>
+      <div class="mb-1">
+        <%= ff.check_box :men_fashion, class: "accent-primary cursor-pointer" %>
+        <%= ff.label :men_fashion, class: "cursor-pointer" %>
+      </div>
+      <div class="mb-1">
+        <%= ff.check_box :children_fashion, class: "accent-primary cursor-pointer" %>
+        <%= ff.label :children_fashion, class: "cursor-pointer" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="w-full flex justify-center">
+    <%= form.submit t("subscribe_me"), class: "bg-primary text-white py-1 px-2 rounded-md cursor-pointer" %>
+  </div>
+<% end %>
