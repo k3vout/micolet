@@ -3,7 +3,11 @@ class SubscriptionMailer < ApplicationMailer
 
   def confirmation(user)
     @user = user
+    mail to: @user.email, subject: t("subscription_mailer.confirmation.subject")
+  end
 
-    mail to: @user.email, subject: t("subscription_mailer.subject")
+  def coupon(user)
+    @user = user
+    mail to: @user.email, subject: t("subscription_mailer.coupon.subject_coupon")
   end
 end

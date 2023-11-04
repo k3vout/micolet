@@ -47,11 +47,24 @@ en:
   preferences: Preferences
   subscribe_me: Subscribe me!
   subscribe_success: You have been subscribed successfully!
+  survey_completed: Thank you for completing the survey!
+  add_answer: Add answer
+  cancel: Cancel
+  earn_coupon_message: Earn a coupon for completing the survey!
   subscription_mailer:
-    subject: "Subscription confirmation"
-    body_html: |
-      <p>Hi %{email},</p>
-      <p>Thank you for subscribing to our newsletter.
-      We will keep you informed about our launch.</p>
-      <p>Best regards,</p>
-      <p>The Micolet team</p>
+    confirmation:
+      subject: "Subscription confirmation"
+      body_html: |
+        <p>Hi %{email},</p>
+        <p>Thank you for subscribing to our newsletter.
+        We will keep you informed about our launch.</p>
+        <p>Best regards,</p>
+        <p>The Micolet team</p>
+    coupon:
+      subject: "Coupon for completing the survey"
+      body_html: |
+        <p>Hi %{email},</p>
+        <p>Thank you for completing the survey.
+        Here is your coupon code: <strong>%{coupon_code}</strong></p>
+        <p>Best regards,</p>
+        <p>The Micolet team</p>

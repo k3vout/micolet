@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   resources :users, only: [] do
     post :subscribe, on: :collection
   end
+
+  resources :questions, only: [:show] do
+    post :add_answer, on: :member
+  end
 end
