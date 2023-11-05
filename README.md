@@ -1,24 +1,69 @@
-# README
+# MICOLET
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Subscribe to Micolet newsletter.
 
-Things you may want to cover:
+![image](https://github.com/sevinchek/micolet/assets/39852288/a9529f49-615b-46dd-873f-2ceeaaac2e9a)
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+### Requirements
 
-* Configuration
+Ruby 3.2.1
 
-* Database creation
+### Installation
 
-* Database initialization
+1. Clone the repo
 
-* How to run the test suite
+   ```sh
+   git clone git@github.com:sevinchek/micolet.git
+   ```
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Install ruby gems dependencies
 
-* Deployment instructions
+   ```sh
+   bundle install
+   ```
 
-* ...
+3. Install Javascript dependencies
+
+   ```sh
+   yarn install
+   ```
+
+4. Database creation
+
+   ```
+   rails db:prepare
+   ```
+
+5. .ENV file setup
+
+   ```
+   ABSTRACT_API_KEY = "ABC123"
+   ```
+
+6. Seed database
+
+   ```
+   rails db:seed
+   ```
+
+7. Run the web server
+
+   ```sh
+   bin/dev
+   ```
+
+8. Access to the website in a browser with the following link
+
+   ```sh
+   localhost:3000
+   ```
+
+### Test
+
+1. For testing run:
+
+   ```sh
+   rspec
+   ```

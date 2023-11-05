@@ -12,7 +12,12 @@
     <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="min-h-screen bg-gray-50 flex justify-center items-center">
+    <div id="flash" class="fixed z-10 left-1/2 -translate-x-1/2 top-10 mx-4 flex flex-col items-center gap-2">
+      <%= render partial: "shared/flash" %>
+    </div>
+    <main class="">
+      <%= yield %>
+    </main>
   </body>
 </html>

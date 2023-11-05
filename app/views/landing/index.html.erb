@@ -1,0 +1,14 @@
+<div class="w-full bg-white p-4 flex flex-col items-center rounded-md">
+  <div class="flex flex-col items-center mb-14">
+    <div class="w-60">
+      <%= image_tag("https://d30o7qbghf97ws.cloudfront.net/micolet-logo.svg", class: "") %>
+    </div>
+    <p class="text-xs whitespace-nowrap text-gray-400"><%= t("brand_motto") %></p>
+  </div>
+  
+  <p class="font-semibold pb-3 text-center"><%= t("welcome_message") %></p>
+
+  <p class="font-semibold text-sm pb-6"><%= t("subscribe_message") %></p>
+
+  <%= render "form", user: @user %>
+</div>
