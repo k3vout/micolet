@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UserPreference, type: :model do
+  before { allow_any_instance_of(EmailValidatorService).to receive(:valid?) { true } }
   let(:user) { User.create(email: "kevin@gmail.com") }
   subject { user.build_user_preference }
 
